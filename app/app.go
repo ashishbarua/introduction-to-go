@@ -1,15 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	customer := getData(1)
-	fmt.Println(customer)
+	customers := getData()
+	fmt.Println(customers)
+	fmt.Println(len(customers))
 }
 
-func getData(customerId int) (customer string) {
-	firstName := "Ashish"
-	lastName := "Barua"
-	fullName := firstName + " " + lastName
-	return fullName
+func getData() (customers []string) {
+	customers = []string{"Marcel Dempers", "Bob Smith", "John Smith"}
+	customers = append(customers, "Ben Spain")
+	customers = append(customers, "Aleem Janmohamed")
+	customers = append(customers, "Jamie le Notre")
+	customers = append(customers, "Victor Savkov")
+
+	for _, customer := range customers {
+		fmt.Println(customer)
+	}
+	return customers
 }
