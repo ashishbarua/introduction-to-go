@@ -1,2 +1,2 @@
 ## Project
-Repository for introductory course for programming in Go
+Repository for introductory course on programming in Go
